@@ -1,5 +1,15 @@
+.body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
   max-width: $wrapper-max-width;
   margin: 0 auto;
   padding: 0 $wrapper-side-padding;
+}
+.section-header {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
 }
