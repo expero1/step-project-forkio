@@ -20,7 +20,7 @@ export const appPath = {
     fonts: `${buildDir}/fonts`,
   },
   watch: {
-    html: `${srcDir}/html/**/*.html`,
+    html: `${srcDir}/html/**/*.{html,json}`,
     scss: `${srcDir}/scss/**/*.scss`,
     js: `${srcDir}/js/**/*.js`,
     img: `${srcDir}/img/**/*.{${imgExt}}`,
