@@ -1,6 +1,6 @@
 import gulp from "gulp";
 const { src, dest, series, parallel, watch, task } = gulp;
-import webpack from "webpack-stream";
+//import webpack from "webpack-stream";
 import rename from "gulp-rename";
 import sourcemaps from "gulp-sourcemaps";
 /* css */
@@ -30,7 +30,7 @@ export const plugins = {
   rename,
   sourcemaps,
   /* js */
-  webpack,
+  //webpack,
   uglify: uglify,
   /* css */
   sass: gulpSass(sass),
