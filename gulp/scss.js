@@ -19,6 +19,7 @@ export function scss() {
       .pipe(showAlertMessage("SCSS"))
       .pipe(sass())
       .pipe(rename("style.min.css"))
+      .pipe(replace(/@img/g, "../img"))
       .pipe(purgecss({ content: ["${path.dest.html/*.html}"] }))
       // .pipe(cleancss())
       .pipe(
