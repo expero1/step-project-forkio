@@ -20,7 +20,12 @@ export function scss() {
       .pipe(sass())
       .pipe(rename("style.min.css"))
       .pipe(replace(/@img/g, "../img"))
-      .pipe(purgecss({ content: ["${path.dest.html/*.html}"] }))
+      .pipe(
+        purgecss({
+          content: [`${path.dest.html}/*.html}`],
+          safelist: [/active$/],
+        })
+      )
       // .pipe(cleancss())
       .pipe(
         cleancss({
