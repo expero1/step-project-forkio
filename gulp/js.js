@@ -1,9 +1,11 @@
 import { appPath as path } from "./app-path.js";
 import { plugins } from "./plugins.js";
-const { src, dest, sourcemaps, browserSync, concat, uglify } = plugins;
+const { src, dest, sourcemaps, browserSync, concat, uglify, showAlertMessage } =
+  plugins;
 export function js() {
   return (
     src(path.src.js, { allowEmpty: true })
+      .pipe(showAlertMessage("JS"))
       .pipe(concat("script.min.js"))
       .pipe(uglify())
       // .pipe(
@@ -19,6 +21,7 @@ export function js() {
 export function jsDev() {
   return (
     src(path.src.js, { allowEmpty: true })
+      .pipe(showAlertMessage("JS"))
       .pipe(concat("script.min.js"))
       .pipe(sourcemaps.init())
       // .pipe(uglify())
