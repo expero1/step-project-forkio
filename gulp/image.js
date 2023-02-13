@@ -5,6 +5,13 @@ export function image() {
   return src(path.src.img)
     .pipe(showAlertMessage("Image"))
     .pipe(newer(path.build.img))
-    .pipe(imagemin())
+    .pipe(
+      imagemin({
+        progressive: true,
+        svgPlugins: [{ removeViewBox: false }],
+        interlaced: true,
+        optimizationLevel: 5,
+      })
+    )
     .pipe(dest(path.build.img));
 }
