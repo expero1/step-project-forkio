@@ -19,6 +19,17 @@ import imagemin from "gulp-imagemin";
 import newer from "gulp-newer";
 import concat from "gulp-concat";
 import uglify from "gulp-uglify";
+import plumber from "gulp-plumber";
+import notify from "gulp-notify";
+
+const showAlertMessage = (title = "unknown") => {
+  return plumber(
+    notify.onError({
+      title: title,
+      message: "Error: <%= error.message %>",
+    })
+  );
+};
 
 export const plugins = {
   src,
@@ -49,4 +60,7 @@ export const plugins = {
   newer,
   /* browser */
   browserSync,
+  // plumber,
+  // notify,
+  showAlertMessage,
 };
