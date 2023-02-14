@@ -9,27 +9,44 @@
 .price-cards {
   display: flex;
   justify-content: stretch;
+  align-items: center;
   gap: 20px;
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .price-card {
-  padding-bottom: 50px;
+  padding-bottom: 39px;
   text-align: center;
   font-weight: 400;
   width: 25%;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.11);
+  &--highlight {
+    background-color: rgba(70, 48, 72, 0.84);
+    padding-bottom: 48px;
+  }
   &__plan {
     font-size: 24px;
     font-weight: 400;
     padding: 36px 5px;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.06);
+    .price-card--highlight & {
+      padding-top: 43px;
+      padding-bottom: 43px;
+      background: rgba(0, 0, 0, 0.11);
+    }
   }
   &__price {
     font-size: 60px;
     font-weight: 700;
     padding: 30px 5px 20px 5px;
+    .price-card--highlight & {
+      font-size: 82px;
+      padding-top: 14px;
+      padding-bottom: 16px;
+    }
   }
   &__price-currency {
     font-weight: 400;
@@ -37,18 +54,28 @@
   &__period {
     font-size: 14px;
     text-transform: uppercase;
-    padding: 0px 5px 10px 5px;
+    padding: 0px 5px 40px 5px;
+    .price-card--highlight & {
+      padding-bottom: 49px;
+    }
   }
   &__divider {
-    margin-top: 30px;
-    margin-bottom: 35px;
+    // margin-top: 30px;
+    // margin-bottom: 35px;
   }
   &__advantage {
     font-size: 16px;
     min-height: 78px;
     list-style: none;
     margin: 0;
+    margin-top: 35px;
     padding: 0;
+    // padding-top: 35px;
+    // padding-bottom: 42px;
+    .price-card--highlight & {
+      margin-top: 45px;
+      min-height: 125px;
+    }
     &-item {
       line-height: 1.1;
     }
@@ -64,5 +91,24 @@
     font-weight: 400;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.15);
+    .price-card--highlight & {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      min-width: 190px;
+    }
+  }
+}
+.price-card--highlight {
+  // background-color: rgba(70, 48, 72, 0.84);
+
+  .price-card {
+    &__plan {
+      // padding-top: 43px;
+      // padding-bottom: 43px;
+      // background: rgba(0, 0, 0, 0.11);
+    }
+    &__price {
+      // font-size: 82px;
+    }
   }
 }
