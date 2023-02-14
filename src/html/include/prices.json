@@ -2,21 +2,25 @@
   {
     "plan": "Students",
     "price": "29",
-    "advantages": ["Personal License"]
+    "advantages": ["Personal License"],
+    "highlight": false
   },
   {
     "plan": "professional",
     "price": "59",
-    "advantages": ["Professional License", "Email Support"]
+    "advantages": ["Professional License", "Email Support"],
+    "highlight": false
   },
   {
     "plan": "agency",
     "price": "99",
-    "advantages": ["1-12 Team Members", "Phone Support"]
+    "advantages": ["1-12 Team Members", "Phone Support"],
+    "highlight": true
   },
   {
     "plan": "enterprise",
     "price": "159",
-    "advantages": ["Unlimited Team Members", "24/ 7 Phone Support"]
+    "advantages": ["Unlimited Team Members", "24/ 7 Phone Support"],
+    "highlight": false
   }
 ]
