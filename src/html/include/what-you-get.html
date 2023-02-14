@@ -1,33 +1,13 @@
-<section class="what-you-get wrapper">
-	<h2 class="section-header what-you-get__header">Here is what you get</h2>
-	<div class="props">
-		<div class="prop__container">
-			<img src="../../img/what-you-get/web-page-icon.png" alt="web page icon">
-			<h3 class="prop__header">Creatred to Make The Web Better</h3>
-			<p class="prop__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
-				vulputate
-				dignissim. Sed id metus
-				id quam auctor molestie eget ut augue. </p>
+<section class="what-you-get">
+	<div class="wrapper what-you-get__wrapper">
+		<h2 class="section-header what-you-get__header">Here is what you get</h2>
+		<div class="props">
+			@@loop("what-you-get-card.html", "./include/what-you-get-card.json")
+
 		</div>
-		<div class="prop__container">
-			<img src="../../img/what-you-get/volume-icon.png" alt="web page icon">
-			<h3 class="prop__header">Incredibly Powerful Tool</h3>
-			<p class="prop__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
-				volutpat
-				massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-		</div>
-		<div class="prop__container">
-			<img src="../../img/what-you-get/experimental-icon.png" alt="web page icon">
-			<h3 class="prop__header">Experimental Stuff</h3>
-			<p class="prop__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
-				volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-		</div>
-		<div class="prop__container">
-			<img src="../../img/what-you-get/time-icon.png" alt="web page icon">
-			<h3 class="prop__header">Creatred to Make The Web Better</h3>
-			<p class="prop__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
-				volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
-		</div>
+		<img class="fork-screenshot" src="../../img/what-you-get/fork-editor-screenshot.png"
+			alt="Fork Editor Screenshot">
+
 	</div>
-	<img class="fork-screenshot" src="../../img/what-you-get/fork-editor-screenshot.png" alt="Fork Editor Screenshot">
+
 </section>
