@@ -4,6 +4,7 @@ const {
   src,
   dest,
   rename,
+  replace,
   autoprefixer,
   sass,
   sourcemaps,
@@ -22,7 +23,7 @@ export function scss() {
       .pipe(replace(/@img/g, "../img"))
       .pipe(
         purgecss({
-          content: [`${path.dest.html}/*.html}`],
+          content: [`${path.build.html}/*.html}`],
           safelist: [/active$/],
         })
       )
