@@ -1,0 +1,11 @@
+<div class="price-card">
+	<h3 class="price-card__plan">@@plan</h3>
+	<p class="price-card__price"><span class="price-card__price-currency">$</span>@@price</p>
+	<p class="price-card__period">per month</p>
+	<span class="divider price-card__divider"></span>
+	<ul class="price-card__advantage">
+		@@for (var i=0;i < advantages.length; i++){ <li class="price-card__advantage-item">${advantages[i]}</li>}
+	</ul>
+
+	<a class="action-button price-card__button" href="#">purchase</a>
+</div>

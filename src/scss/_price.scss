@@ -13,9 +13,7 @@
   width: 100%;
 }
 .price-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-bottom: 50px;
   text-align: center;
   font-weight: 400;
   width: 25%;
@@ -32,7 +30,7 @@
 .price-card__price {
   font-size: 60px;
   font-weight: 700;
-  padding: 25px 5px;
+  padding: 30px 5px 20px 5px;
 }
 .price-card__price-currency {
   font-weight: 400;
@@ -40,11 +38,28 @@
 .price-card__period {
   font-size: 14px;
   text-transform: uppercase;
+  padding: 0px 5px 10px 5px;
+}
+.price-card__divider {
+  margin-top: 30px;
+  margin-bottom: 35px;
 }
 .price-card__advantage {
   font-size: 16px;
+  min-height: 78px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.price-card__advantage-item {
+  line-height: 1.1;
 }
 .price-card__button {
+  display: block;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 13px 5px;
+  min-width: 163px;
   font-size: 15px;
   font-weight: 400;
   text-transform: uppercase;
