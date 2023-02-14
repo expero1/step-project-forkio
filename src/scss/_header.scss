@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/img_1.png) center center no-repeat;
+    background-size: cover;
+    height: 800px;
+    span {
+        color: #8D81AC;
+        text-transform: uppercase;
+    }
+}
+
+h1 {
+    color: white;
+}
+
+navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px 90px;
+}
+
+.menu {
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 48px;
+        align-items: center;
+    }
+    li {
+        display: inline;
+    }
+    a {
+        color: #8D81AC;
+        text-decoration: none;
+    }
+}
+
