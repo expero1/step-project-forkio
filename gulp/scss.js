@@ -11,13 +11,21 @@ const {
   browserSync,
   gcmq,
   purgecss,
+  showAlertMessage,
 } = plugins;
 export function scss() {
   return (
     src(`${path.src.scss}`)
+      .pipe(showAlertMessage("SCSS"))
       .pipe(sass())
       .pipe(rename("style.min.css"))
-      .pipe(purgecss({ content: ["${path.dest.html/*.html}"] }))
+      .pipe(replace(/@img/g, "../img"))
+      .pipe(
+        purgecss({
+          content: [`${path.dest.html}/*.html}`],
+          safelist: [/active$/],
+        })
+      )
       // .pipe(cleancss())
       .pipe(
         cleancss({
@@ -38,6 +46,7 @@ export function scss() {
 export function scssDev() {
   return (
     src(`${path.src.scss}`)
+      .pipe(showAlertMessage("SCSS"))
       .pipe(sass())
       .pipe(rename("style.min.css"))
       // .pipe(purgecss({ content: ["${path.dest.html/*.html}"] }))
