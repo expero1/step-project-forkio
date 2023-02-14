@@ -1,0 +1,17 @@
+.what-you-get {
+  display: grid;
+  grid-template-areas:
+    "props header"
+    "props screenshot"
+    "props screenshot"
+    "props screenshot";
+}
+.what-you-get__header {
+  grid-area: header;
+}
+.props {
+  grid-area: props;
+}
+.fork-screenshot {
+  grid-area: screenshot;
+}
