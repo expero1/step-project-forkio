@@ -1,17 +1,79 @@
 .what-you-get {
-  display: grid;
-  grid-template-areas:
-    "props header"
-    "props screenshot"
-    "props screenshot"
-    "props screenshot";
+  /*TEMPORARY*/
+  min-height: 2000px;
+  /*TEMPORARY*/
+
+  background-color: #f4f4f4;
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "props header"
+      "props screenshot"
+      "props screenshot"
+      "props screenshot";
+    grid-template-columns: 1fr 1.2fr;
+    // grid-template-columns: 1fr minmax(1.2fr, 2fr);
+    column-gap: 20px;
+    padding-top: 71px;
+  }
 }
 .what-you-get__header {
   grid-area: header;
+  justify-self: start;
+  text-transform: initial;
+  text-align: start;
+  padding-left: 66px;
+  padding-bottom: 18px;
+  color: #8d81ac;
+  &::before {
+    content: "<";
+  }
+  &::after {
+    content: ">";
+  }
 }
 .props {
   grid-area: props;
+  padding-top: 5px;
+  padding-left: 91px;
 }
+.prop-card {
+  justify-self: end;
+  display: grid;
+  //   grid-template-columns: minmax(30%, 93px) minmax(50%, 1fr);
+  grid-template-columns: 93px 1fr;
+  gap: 42px;
+  //   font-weight: 400;
+  //   padding-bottom: 37px;
+  min-height: 144px;
+
+  &__icon {
+    // float: left;
+    justify-self: end;
+    max-width: 111px;
+    max-height: 84px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+  &__header {
+    font-size: 16px;
+    font-weight: 400;
+    // text-transform: capitalize;
+    color: #323232;
+    padding-bottom: 16px;
+    line-height: 0.7;
+  }
+  &__description {
+    font-size: 14px;
+    color: #848e97;
+    line-height: 1.5;
+  }
+}
+
 .fork-screenshot {
   grid-area: screenshot;
+  justify-self: end;
+  max-width: 100%;
+  height: auto;
 }
