@@ -12,8 +12,8 @@
       "props screenshot"
       "props screenshot";
     grid-template-columns: 1fr 1.2fr;
-    // grid-template-columns: 1fr minmax(1.2fr, 2fr);
-    column-gap: 20px;
+    // grid-template-columns: 1fr minmax(min-content, 1.1fr);
+    column-gap: 5vw;
     padding-top: 71px;
   }
 }
@@ -22,7 +22,7 @@
   justify-self: start;
   text-transform: initial;
   text-align: start;
-  padding-left: 66px;
+  padding-left: 3%;
   padding-bottom: 18px;
   color: #8d81ac;
   &::before {
@@ -35,23 +35,33 @@
 .props {
   grid-area: props;
   padding-top: 5px;
-  padding-left: 91px;
+  //   padding-bottom: 10px;
+  //   padding-left: 91px;
 }
 .prop-card {
   justify-self: end;
   display: grid;
+  justify-content: end;
   //   grid-template-columns: minmax(30%, 93px) minmax(50%, 1fr);
-  grid-template-columns: 93px 1fr;
-  gap: 42px;
-  //   font-weight: 400;
-  //   padding-bottom: 37px;
-  min-height: 144px;
+  //   grid-template-columns: 93px 1fr;
+  grid-template-columns: minmax(30%, 93px) minmax(50%, 358px);
+  //   gap: 1vw;
 
+  //   font-weight: 400;
+  padding-bottom: 33px;
+  min-height: 124px;
+  //   padding-bottom: 20px;
+  &__icon-wrapper {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
   &__icon {
     // float: left;
     justify-self: end;
-    max-width: 111px;
+    max-width: 100%;
+    // max-width: 111px;
     max-height: 84px;
+    width: fit-content;
     object-fit: contain;
     margin: 0 auto;
     display: block;
@@ -61,8 +71,8 @@
     font-weight: 400;
     // text-transform: capitalize;
     color: #323232;
-    padding-bottom: 16px;
-    line-height: 0.7;
+    padding-bottom: 11px;
+    // line-height: 0.7;
   }
   &__description {
     font-size: 14px;
@@ -74,6 +84,7 @@
 .fork-screenshot {
   grid-area: screenshot;
   justify-self: end;
-  max-width: 100%;
+  width: 100%;
+  min-width: 600px;
   height: auto;
 }
