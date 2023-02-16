@@ -1,0 +1,30 @@
+.rev-editor {
+  text-align: center;
+  /*TEMPORARY*/
+  min-height: 200vw;
+}
+.rev-editor__header {
+  font-size: 54px;
+  text-transform: uppercase;
+  color: #635c73;
+  padding-bottom: 27px;
+}
+
+.rev-editor__content {
+  max-width: 861px;
+  margin: 0 auto;
+  font-size: 21px;
+  color: #323232;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  line-height: 1.52;
+  padding-bottom: 23px;
+}
+
+.git-block {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-content: center;
+}
+.git-btn {
+}

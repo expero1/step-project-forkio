@@ -1,0 +1,50 @@
+.git-btn {
+  background-color: #f4f4f4;
+  background: linear-gradient(
+    0deg,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(255, 255, 255, 1) 120%
+  );
+  border: 1px solid rgba(132, 142, 151, 1);
+  border-radius: 3px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  color: black;
+  vertical-align: middle;
+  &::before {
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  &__counter {
+    border-left: 1px solid rgba(132, 142, 151, 1);
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 6px;
+    margin-left: 10px;
+    background-color: #fff;
+  }
+}
+
+.watch-btn {
+  &::before {
+    content: url("../img/revolutionary-editor/watch-icon.svg");
+  }
+}
+.star-btn {
+  &::before {
+    content: url("../img/revolutionary-editor/star-icon.svg");
+  }
+}
+.fork-btn {
+  &::before {
+    content: url("../img/revolutionary-editor/fork-icon.svg");
+  }
+}
