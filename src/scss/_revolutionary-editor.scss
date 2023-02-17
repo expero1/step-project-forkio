@@ -1,13 +1,13 @@
 .rev-editor {
   text-align: center;
-  /*TEMPORARY*/
-  min-height: 200vw;
+  min-height: 200vw; /*TEMPORARY*/
 }
 .rev-editor__header {
   font-size: 54px;
   text-transform: uppercase;
   color: #635c73;
   padding-bottom: 27px;
+  margin: 0 auto;
 }
 
 .rev-editor__content {
@@ -25,6 +25,34 @@
   justify-content: center;
   gap: 10px;
   align-content: center;
+  margin: 0 auto;
 }
-.git-btn {
+
+@media screen and (max-width: $medium-screen-width) {
+  .rev-editor__header {
+    font-size: 42px;
+    padding-bottom: 14px;
+  }
+  .rev-editor__content {
+    padding-bottom: 39px;
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: $small-screen-width) {
+  .rev-editor__header {
+    font-size: 26px;
+    max-width: 345px;
+    padding-bottom: 22px;
+  }
+  .rev-editor__content {
+    font-size: 14px;
+    max-width: 314px;
+    padding-bottom: 28px;
+  }
+  .git-block {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    max-width: 320px;
+  }
 }

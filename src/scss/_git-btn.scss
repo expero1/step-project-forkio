@@ -1,5 +1,5 @@
 .git-btn {
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
   background: linear-gradient(
     0deg,
     rgba(244, 244, 244, 1) 0%,
@@ -19,6 +19,9 @@
     padding-right: 2px;
     padding-left: 5px;
     vertical-align: middle;
+  }
+  &:hover {
+    background: rgba(132, 142, 151, 0.2);
   }
   &__counter {
     border-left: 1px solid rgba(132, 142, 151, 1);
