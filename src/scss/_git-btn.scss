@@ -1,52 +1,110 @@
+// .git-btn {
+//   // background-color: #f4f4f4;
+//   background: linear-gradient(
+//     0deg,
+//     rgba(244, 244, 244, 1) 0%,
+//     rgba(255, 255, 255, 1) 120%
+//   );
+//   background: red;
+//   border: 1px solid rgba(132, 142, 151, 1);
+//   border-radius: 3px;
+//   // padding-top: 3px;
+//   // padding-bottom: 2px;
+//   padding-left: 5px;
+//   text-decoration: none;
+//   font-size: 12px;
+//   font-weight: 800;
+//   color: black;
+//   vertical-align: middle;
+//   height: 100%;
+
+//   &::before {
+//     padding-right: 2px;
+//     padding-left: 5px;
+//     vertical-align: middle;
+//   }
+//   &:hover {
+//     background: rgba(132, 142, 151, 0.2);
+//   }
+//   &__counter {
+//     border-left: 1px solid rgba(132, 142, 151, 1);
+//     border-bottom-right-radius: 2px;
+//     border-top-right-radius: 2px;
+//     // padding-top: 3px;
+//     // padding-bottom: 5px;
+//     padding-left: 5px;
+//     padding-right: 6px;
+//     margin-left: 10px;
+//     // margin: 0;
+//     line-height: 1.4;
+//     height: 100%;
+//     display: inline-block;
+//     background-color: #fff;
+//     vertical-align: middle;
+//   }
+// }
+
+$font-size: 11px;
+$vertical-padding: 0.5em;
 .git-btn {
-  // background-color: #f4f4f4;
-  background: linear-gradient(
-    0deg,
-    rgba(244, 244, 244, 1) 0%,
-    rgba(255, 255, 255, 1) 120%
-  );
-  border: 1px solid rgba(132, 142, 151, 1);
-  border-radius: 3px;
-  padding-top: 3px;
-  padding-bottom: 2px;
-  padding-left: 5px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: $font-size;
   font-weight: 800;
   color: black;
-  vertical-align: middle;
-  &::before {
-    padding-right: 2px;
-    padding-left: 5px;
-    vertical-align: middle;
+  &__inner {
+    padding-top: $vertical-padding;
+    padding-bottom: $vertical-padding;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    vertical-align: bottom;
+    border: 1px solid rgba(132, 142, 151, 1);
+    // border: 1px solid rgba(132, 142, 151, 1);
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-left: none;
+    }
   }
-  &:hover {
-    background: rgba(132, 142, 151, 0.2);
+
+  &__content {
+    padding-right: 10px;
+    padding-left: 5px;
+    min-width: 35px;
+    // background-color: red;
+    background: linear-gradient(
+      0deg,
+      rgba(244, 244, 244, 1) 0%,
+      rgba(255, 255, 255, 1) 120%
+    );
+    &:before {
+      position: relative;
+      top: 4px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   &__counter {
-    border-left: 1px solid rgba(132, 142, 151, 1);
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    padding-top: 3px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 6px;
-    margin-left: 10px;
     background-color: #fff;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 }
 
-.watch-btn {
+.watch-icon {
   &::before {
     content: url("../img/revolutionary-editor/watch-icon.svg");
   }
 }
-.star-btn {
+.star-icon {
   &::before {
     content: url("../img/revolutionary-editor/star-icon.svg");
   }
 }
-.fork-btn {
+.fork-icon {
   &::before {
     content: url("../img/revolutionary-editor/fork-icon.svg");
   }
