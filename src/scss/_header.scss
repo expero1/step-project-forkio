@@ -1,5 +1,4 @@
-
-header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,33 +6,32 @@ header {
     background: url(../img/img_1.png) center center no-repeat;
     background-size: cover;
     height: 800px;
-    button {
-        color: $color-white;
-        text-align: center;
-        background-color: $color-purple;
-        border-radius: 40px;
-        padding: 0;
-        border: 0;
-        transition: 1s;
-        &:hover {
-            color: $color-purple;
-            background-color: $color-white;
-            border: 2px solid $color-purple;
-        }
+}
+
+// li {
+//     display: inline;
+// }
+
+.button_hover {
+    text-align: center;
+    border-radius: 40px;
+    padding: 0;
+    border: 0;
+    transition: 1s;
+    &:hover {
+        color: $color-purple;
+        background-color: $color-white;
+        border: 2px solid $color-purple;
     }
 }
 
-navbar {
+.navbar {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 30px 90px;
     line-height: 17px;
-    span {
-        color: $color-purple;
-        text-transform: uppercase;
-    }
     @media (max-width: $wrapper-max-width){
         background-color: #27262A;
         height: 118px;
@@ -43,73 +41,73 @@ navbar {
     }
 }
 
-.navbar-logo {
+.navbar_logo {
+    color: $color-purple;
+    text-transform: uppercase;
     display: flex;
     align-items: flex-end;
     transition: 1s;
-    span {
-        margin: 0 0 5px 17px;
-        @include font('Lato', normal, 700, 24px, 16px);
-        transition: 1s;
-        &:hover {
-            color: $color-white;
-        }
-        @media (max-width: $small-screen-width) {
-            display: none;
-        }
-    }
     @media (max-width: $wrapper-max-width) {
         position: absolute;
         left: 20px;
         top: 22px;
     }
-    // svg {
-    //     fill: currentColor;
-    //     &:hover {
-    //         fill: $color-white;
-    //     }
-    // }
+    @media (max-width: $small-screen-width) {
+        top: 31px;
+    }
 }
 
-.navbar-nav{
+.navbar_logo_span {
+    margin: 0 0 5px 17px;
+    @include font('Lato', normal, 700, 24px, 16px);
+        transition: 1s;
+    &:hover {
+        color: $color-white;
+    }
+    @media (max-width: $small-screen-width) {
+        display: none;
+    }
+}
+
+
+.navbar_menu{
     display: flex;
     gap: 48px;
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 10%;
+}
+
+.navbar_menu_list {
+    list-style: none;
+    display: flex;
+    gap: 10%;
+    width: 517px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    @include font('Montserrat', normal, 700, 16px, 15px);
+    @media (max-width: $wrapper-max-width) {
+        position: absolute;
+        top: 83px;
         width: 517px;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
-        @include font('Montserrat', normal, 700, 16px, 15px);
-        @media (max-width: $wrapper-max-width) {
-            position: absolute;
-            top: 83px;
-            width: 517px;
-            height: 21px;
-            left: calc(50% - 517px/2);
-            line-height: 18px;
-        }
-        @media (max-width: $small-screen-width) {
-            display: none;
-        }
+        height: 21px;
+        left: calc(50% - 517px/2);
+        line-height: 18px;
     }
-    li {
-        display: inline;
-    }
-    a {
-        color: $color-purple;
-        text-decoration: none;
-        transition: 1s;
-        &:hover {
-            color: $color-white;
-        }
+    @media (max-width: $small-screen-width) {
+        display: none;
     }
 }
 
-.navbar-button {
+.navbar_menu_link {
+    color: $color-purple;
+    text-decoration: none;
+    transition: 1s;
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.navbar_menu_button {
     @include font('Montserrat', normal, 700, 16px, 17px);
     width: 145px;
     height: 37px;
@@ -128,7 +126,26 @@ navbar {
     }
 }
 
-.header-content {
+.navbar_button_burger {
+    display: flex;
+    align-items: center;
+    display: none;
+    @media (max-width: $small-screen-width) {
+        display: block;
+        background-color: #27262A;
+        color: $color-white;
+        height: 23px;
+        width: 23px;
+        position: absolute;
+        right: 25px;
+        border: none;
+        padding: 0;
+        @include font('Lato', normal, 900, 20px, 5px);
+        text-align: end;
+    }
+}
+
+.header_figure {
     position: absolute;
     top: 183px;
     display: flex;
@@ -137,44 +154,65 @@ navbar {
     gap: 19px;
     margin: 0;
     padding: 0;
-    h1 {
-        color: $color-white;
-        @include font('Montserrat', normal, 700, 82px, 82px);
-    }
-    span {
-        color: $color-purple;
-        @include font('Lato', normal, 400, 30px, 30px);
-        text-align: center;
-    }
-    p {
-        color: $color-grey;
-        @include font('Montserrat', normal, 400, 16px, 16px);
-    }
     @media (max-width: $wrapper-max-width) {
         top: 186px;
-        h1 {
-            @include font('Montserrat', normal, 700, 72px, 72px);
-        }
-        span {
-            @include font('Lato', normal, 400, 24px, 24px);
-        }
-        p {
-            @include font('Lato', normal, 400, 14px, 14px);
-        }
     }
     @media (max-width: $small-screen-width) {
         text-align: center;
         top: 153px;
-        h1 {
-            @include font('Montserrat', normal, 700, 48px, 48px);
-        }
-        span {
-            @include font('Lato', normal, 400, 18px, 24px);
-        }
     }
 }
 
-#download {
+.header_figure_title {
+    color: $color-white;
+    @include font('Montserrat', normal, 700, 82px, 82px);
+    @media (max-width: $wrapper-max-width) {
+        @include font('Montserrat', normal, 700, 72px, 72px);
+    }
+    @media (max-width: $small-screen-width) {
+        @include font('Montserrat', normal, 700, 48px, 48px);
+    }
+}
+
+.header_figure_span {
+    color: $color-purple;
+    @include font('Lato', normal, 400, 30px, 30px);
+    text-align: center;
+    @media (max-width: $wrapper-max-width) {
+        @include font('Lato', normal, 400, 24px, 24px);
+    }
+    @media (max-width: $small-screen-width) {
+        @include font('Lato', normal, 400, 18px, 24px);
+    }
+}
+
+.header_figure_paragraph {
+    color: $color-grey;
+    @include font('Montserrat', normal, 400, 16px, 16px);
+    @media (max-width: $wrapper-max-width) {
+        @include font('Lato', normal, 400, 14px, 14px);
+    }
+}
+
+.header_wrapper-button {
+    position: relative;
+    bottom: -80px;
+}
+
+.header_button_description {
+    text-align: center;
+    color: $color-grey;
+    @include font('Montserrat', normal, 400, 14px, 15px);
+        margin: 19px;
+    @media (max-width: $wrapper-max-width) {
+        line-height: 16px;
+    }
+    @media (max-width: $small-screen-width) {
+        @include font('Montserrat', normal, 400, 14px, 14px);
+    }
+}
+
+.header_button {
     @include font('Montserrat', normal, 700, 21px, 22px);
         width: 390px;
         height: 62px;
@@ -188,19 +226,28 @@ navbar {
     }
 }
 
-.button {
-    position: relative;
-    bottom: -80px;
-    div {
-        text-align: center;
-        color: $color-grey;
-        @include font('Montserrat', normal, 400, 14px, 15px);
-            margin: 19px;
-        @media (max-width: $wrapper-max-width) {
-            line-height: 16px;
-        }
-        @media (max-width: $small-screen-width) {
-            @include font('Montserrat', normal, 400, 14px, 14px);
+.active {
+    @media (max-width: $small-screen-width) {
+        @include font('Montserrat', normal, 400, 26px, 26px);
+        display: flex;
+        flex-direction: column;
+        width: 293px;
+        height: 379px;
+        background-color: #333333;
+        top: 103px;
+        left: calc(50% - 147px);
+        z-index: 1;
+        align-items: flex-start;
+        gap: 1px;
+    }
+    .navbar_menu_link {
+        width: 292px;
+        display: block;
+        color: $color-white;
+        padding: 29px 36px;
+        border-bottom: #3B3B3B 3px solid;
+        &:hover {
+            color: $color-purple;
         }
     }
 }
