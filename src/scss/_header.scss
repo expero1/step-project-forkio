@@ -239,15 +239,23 @@
         z-index: 1;
         align-items: flex-start;
         gap: 1px;
-    }
-    .navbar_menu_link {
+    .navbar_menu_li {
         width: 292px;
         display: block;
+        color: #fff;
+        padding: 17px 0;
+        border-bottom: #3b3b3b 3px solid;
+        }
+    .navbar_menu_link {
+        display: block;
+        height: 53px;
         color: $color-white;
-        padding: 29px 36px;
-        border-bottom: #3B3B3B 3px solid;
-        &:hover {
+        padding: 13px 29px;
+        border-left: #333333 8px solid;
+        &:focus-within {
             color: $color-purple;
+            border-left: $color-purple 8px solid;
+        }
         }
     }
 }
