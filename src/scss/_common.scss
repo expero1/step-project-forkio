@@ -9,14 +9,24 @@ p {
 }
 .wrapper {
   max-width: $wrapper-max-width;
+  min-width: $wrapper-min-width;
   margin: 0 auto;
   padding: 0 $wrapper-side-padding;
+  @media screen and (max-width: $medium-screen-width) {
+    max-width: $medium-screen-width;
+  }
+  @media screen and (max-width: $small-screen-width) {
+    max-width: $small-screen-width;
+  }
 }
 .section-header {
   font-size: 48px;
   font-weight: 700;
   text-transform: capitalize;
   text-align: center;
+  @media screen and (max-width: $medium-screen-width) {
+    font-size: 42px;
+  }
 }
 .action-button {
   border: none;
