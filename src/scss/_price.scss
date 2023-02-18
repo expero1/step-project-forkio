@@ -5,24 +5,48 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  min-height: 200vh; /* TEMPORARY */
 }
 .price-cards {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.card__wrapper {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+  max-width: 257px;
+  // max-width: 299px;
+
+  // padding-left: 15px;
+}
+.card__wrapper--highlight {
+  width: 29%;
+  max-width: 299px;
+}
 .price-card {
+  // width: 86%;
+  width: 100%;
   padding-bottom: 39px;
   text-align: center;
   font-weight: 400;
-  width: 25%;
+
   color: #fff;
   background-color: rgba(255, 255, 255, 0.11);
+  &:not(:first-child) {
+    // margin-left: 15px;
+  }
   &--highlight {
+    // width: 29%;
+    width: 100%;
+    max-width: 299px;
     background-color: rgba(70, 48, 72, 0.84);
     padding-bottom: 48px;
   }
@@ -98,17 +122,46 @@
     }
   }
 }
-.price-card--highlight {
-  // background-color: rgba(70, 48, 72, 0.84);
-  width: 29%;
+
+@media screen and (max-width: $medium-screen-width) {
+  .price-cards {
+    flex-wrap: wrap;
+    // justify-content: end;
+    // min-width: 250px;
+  }
+  .card__wrapper {
+    min-width: 40%;
+  }
+
   .price-card {
-    &__plan {
-      // padding-top: 43px;
-      // padding-bottom: 43px;
-      // background: rgba(0, 0, 0, 0.11);
-    }
-    &__price {
-      // font-size: 82px;
-    }
+    max-width: 257px;
+    min-width: 205px;
+  }
+  .price-card--highlight {
+    max-width: 299px;
+    min-width: 220px;
+  }
+  // .price-card:not(:first-child) {
+  //   margin-left: 0;
+  // }
+  // .price-card:nth-child(2n) {
+  //   margin-left: 15px;
+  // }
+  // .price-card--highlight {
+  //   min-width: 240px;
+  // }
+}
+@media screen and (min-width: calc($small-screen-width + 1px)) and (max-width: $medium-screen-width) {
+  .card__wrapper:nth-child(n) {
+    justify-content: end;
+  }
+  .card__wrapper:nth-child(2n) {
+    justify-content: start;
+  }
+}
+@media screen and (max-width: $small-screen-width) {
+  .card__wrapper {
+    min-width: 100%;
+    justify-content: center;
   }
 }
