@@ -66,6 +66,10 @@
     .price-card--highlight & {
       margin-top: 45px;
       min-height: 125px;
+      @media screen and (max-width: $small-screen-width) {
+        margin-top: 35px;
+        min-height: 136px;
+      }
     }
     &-item {
       line-height: 1.1;
@@ -113,7 +117,16 @@
   }
 }
 @media screen and (max-width: $small-screen-width) {
-  .price-card__wrapper {
-    min-width: 100%;
+  .price-card {
+    &__wrapper {
+      min-width: 100%;
+    }
+    &__advantage {
+      min-height: 87px;
+      margin-top: 24px;
+      &-item {
+        line-height: 1.8;
+      }
+    }
   }
 }

@@ -19,9 +19,26 @@
 }
 
 @media screen and (max-width: $medium-screen-width) {
+  .price__header {
+    font-size: 42px;
+    // padding-bottom: 5px;
+  }
   .price-cards {
     flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 30px;
+    padding-top: 38px;
   }
 }
 @media screen and (max-width: $small-screen-width) {
+  .price__header {
+    font-size: 28px;
+    line-height: 1.5;
+    max-width: 357px;
+    margin: 0 auto;
+  }
+  .price-cards {
+    row-gap: 18px;
+    padding-top: 25px;
+  }
 }
