@@ -17,34 +17,26 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.card__wrapper {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  min-width: 200px;
-  max-width: 257px;
-  // max-width: 299px;
 
-  // padding-left: 15px;
-}
-.card__wrapper--highlight {
-  width: 29%;
-  max-width: 299px;
-}
 .price-card {
-  // width: 86%;
+  &__wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 257px;
+    &--highlight {
+      width: 29%;
+      max-width: 299px;
+    }
+  }
   width: 100%;
   padding-bottom: 39px;
   text-align: center;
   font-weight: 400;
-
   color: #fff;
   background-color: rgba(255, 255, 255, 0.11);
-  &:not(:first-child) {
-    // margin-left: 15px;
-  }
   &--highlight {
-    // width: 29%;
     width: 100%;
     max-width: 299px;
     background-color: rgba(70, 48, 72, 0.84);
@@ -83,10 +75,7 @@
       padding-bottom: 49px;
     }
   }
-  &__divider {
-    // margin-top: 30px;
-    // margin-bottom: 35px;
-  }
+
   &__advantage {
     font-size: 16px;
     min-height: 78px;
@@ -94,8 +83,6 @@
     margin: 0;
     margin-top: 35px;
     padding: 0 10px;
-    // padding-top: 35px;
-    // padding-bottom: 42px;
     .price-card--highlight & {
       margin-top: 45px;
       min-height: 125px;
@@ -126,42 +113,31 @@
 @media screen and (max-width: $medium-screen-width) {
   .price-cards {
     flex-wrap: wrap;
-    // justify-content: end;
-    // min-width: 250px;
   }
-  .card__wrapper {
-    min-width: 40%;
-  }
-
   .price-card {
+    &__wrapper {
+      min-width: 40%;
+    }
     max-width: 257px;
     min-width: 205px;
+    &--highlight {
+      max-width: 299px;
+      min-width: 220px;
+    }
   }
-  .price-card--highlight {
-    max-width: 299px;
-    min-width: 220px;
-  }
-  // .price-card:not(:first-child) {
-  //   margin-left: 0;
-  // }
-  // .price-card:nth-child(2n) {
-  //   margin-left: 15px;
-  // }
-  // .price-card--highlight {
-  //   min-width: 240px;
-  // }
 }
 @media screen and (min-width: calc($small-screen-width + 1px)) and (max-width: $medium-screen-width) {
-  .card__wrapper:nth-child(n) {
-    justify-content: end;
-  }
-  .card__wrapper:nth-child(2n) {
-    justify-content: start;
+  .price-card__wrapper {
+    &:nth-child(odd) {
+      justify-content: end;
+    }
+    &:nth-child(even) {
+      justify-content: start;
+    }
   }
 }
 @media screen and (max-width: $small-screen-width) {
-  .card__wrapper {
+  .price-card__wrapper {
     min-width: 100%;
-    justify-content: center;
   }
 }
