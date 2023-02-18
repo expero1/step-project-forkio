@@ -78,19 +78,19 @@
 .navbar_menu_list {
     list-style: none;
     display: flex;
-    gap: 10%;
+    gap: 48px;
     width: 517px;
     align-items: center;
     margin: 0;
     padding: 0;
     white-space: nowrap;
+    justify-content: center;
     @include font('Montserrat', normal, 700, 16px, 15px);
     @media (max-width: $wrapper-max-width) {
         position: absolute;
         top: 83px;
-        width: 517px;
         height: 21px;
-        left: calc(50% - 517px/2);
+        left: calc(50% - 260px);
         line-height: 18px;
     }
     @media (max-width: $small-screen-width) {
@@ -121,7 +121,7 @@
         position: absolute;
         top: 34px;
         width: 145px;
-        left: calc(50% - 145px/2);
+        left: calc(50% - 70px);
         line-height: 18px;
     }
 }
@@ -180,6 +180,7 @@
     text-align: center;
     @media (max-width: $wrapper-max-width) {
         @include font('Lato', normal, 400, 24px, 24px);
+        margin: 0 20px;
     }
     @media (max-width: $small-screen-width) {
         @include font('Lato', normal, 400, 18px, 24px);
