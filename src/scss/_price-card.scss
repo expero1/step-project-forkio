@@ -90,9 +90,6 @@
   }
 }
 @media screen and (max-width: $medium-screen-width) {
-  .price-cards {
-    flex-wrap: wrap;
-  }
   .price-card {
     &__wrapper {
       min-width: 40%;
