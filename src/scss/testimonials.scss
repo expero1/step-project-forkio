@@ -5,82 +5,76 @@
     background: url('../img/testmonials-bg_1.png') center no-repeat;
     background-size: cover;
     height: 100%;
-}
-
-.testimonials_title {
-    margin-top: 108px;
-    color: $color-white;
-    @include font('Montserrat', normal, 700, 48px, 50px);
-    text-align: center;
-    @media (max-width: $medium-screen-width) {
-        @include font('Montserrat', normal, 700, 42px, 44px);
-        margin-top: 85px;
+    &_title {
+        margin-top: 108px;
+        color: $color-white;
+        @include font('Montserrat', normal, 700, 48px, 50px);
+        text-align: center;
+        @media (max-width: $medium-screen-width) {
+            @include font('Montserrat', normal, 700, 42px, 44px);
+            margin-top: 85px;
+        }
+        @media (max-width: $small-screen-width) {
+            @include font('Montserrat', normal, 700, 36px, 48px);
+            margin-top: 57px;
+        }
     }
-    @media (max-width: $small-screen-width) {
-        @include font('Montserrat', normal, 700, 36px, 48px);
-        margin-top: 57px;
+    &_main {
+        margin: 70px 18px 100px;
+        @media (max-width: $medium-screen-width) {
+            margin: 70px 18px 50px;
+        }
+        @media (max-width: $small-screen-width) {
+            margin: 53px 16px 29px;
+        }
+        &_list {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 100px;
+            justify-content: space-around;
+            @media (max-width: $medium-screen-width) {
+                row-gap: 50px;
+            }
+        }
+        &_link {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 30%;
+            list-style: none;
+            color: $color-white;
+            gap: 20px;
+            @include font('Lato', italic, 700, 16px, 24px);
+            @media (max-width: $medium-screen-width) {
+                width: 40%;
+            }
+            @media (max-width: $small-screen-width) {
+                width: 95%;
+            }
+        }
     }
-}
-
-.testimonials_main {
-    margin: 70px 18px 100px;
-    @media (max-width: $medium-screen-width) {
-        margin: 70px 18px 50px;
+    &_description {
+        width: 70%;
+        margin: auto;
+        color: #A291A5;
+        @include font('Lato', normal, 400, 14px, 21px);
+        text-align: center;
+        @media (max-width: $medium-screen-width) {
+            width: 80%;
+        }
+        &::after {
+            content: " ";
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 10px;
+            border-bottom: #645766 2px solid;
+            margin: auto;
+        }
     }
-    @media (max-width: $small-screen-width) {
-        margin: 53px 16px 29px;
-    }
-}
-
-.testimonials_main_list {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 100px;
-    justify-content: space-around;
-    @media (max-width: $medium-screen-width) {
-        row-gap: 50px;
-    }
-}
-
-.testimonials_main_link {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 30%;
-    list-style: none;
-    color: $color-white;
-    gap: 20px;
-    @include font('Lato', italic, 700, 16px, 24px);
-    @media (max-width: $medium-screen-width) {
-        width: 40%;
-    }
-    @media (max-width: $small-screen-width) {
-        width: 95%;
-    }
-}
-
-.testimonials_description {
-    width: 70%;
-    margin: auto;
-    color: #A291A5;
-    @include font('Lato', normal, 400, 14px, 21px);
-    text-align: center;
-    @media (max-width: $medium-screen-width) {
-        width: 80%;
-    }
-}
-
-.testimonials_description::after {
-    content: " ";
-    display: block;
-    position: relative;
-    width: 80%;
-    height: 10px;
-    border-bottom: #645766 2px solid;
-    margin: auto;
 }
