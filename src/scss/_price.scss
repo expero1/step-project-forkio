@@ -5,7 +5,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  @media screen and (max-width: $small-screen-width) {
+    background-image: url("../img/price/price-section-background-small-screen.png");
+  }
   min-height: 200vh; /* TEMPORARY */
 }
 .price-cards {
