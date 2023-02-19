@@ -16,17 +16,18 @@
     padding-bottom: 0px;
     min-height: 250px;
   }
-  &__icon-wrapper {
-    justify-self: center;
-    max-width: 90px;
-    @media screen and (max-width: $medium-screen-width) {
-    }
-    @media screen and (max-width: $small-screen-width) {
-      justify-self: center;
-      padding-bottom: 27px;
-    }
-  }
+
   &__icon {
+    &--wrapper {
+      justify-self: center;
+      max-width: 90px;
+      @media screen and (max-width: $medium-screen-width) {
+      }
+      @media screen and (max-width: $small-screen-width) {
+        justify-self: center;
+        padding-bottom: 27px;
+      }
+    }
     max-height: 84px;
     object-fit: contain;
     margin: 0 auto;
