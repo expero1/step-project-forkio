@@ -14,9 +14,9 @@
       "props screenshot"
       "props screenshot"
       "props screenshot";
-    grid-template-columns: 1fr 1.2fr;
-    // grid-template-columns: 1fr minmax(min-content, 1.1fr);
-    column-gap: 5vw;
+    grid-template-columns: 1.1fr 1.1fr;
+    grid-template-rows: 1fr 7.5fr;
+    column-gap: 0vw;
     padding-top: 71px;
     @media screen and (max-width: $medium-screen-width) {
       grid-template-areas:
@@ -24,6 +24,7 @@
         "props"
         "screenshot";
       grid-template-columns: 1fr;
+      grid-template-rows: auto 8fr 8fr;
       max-width: 768px;
       justify-items: center;
     }
@@ -38,8 +39,8 @@
   text-transform: initial;
   text-align: start;
   line-height: 1.2;
-  padding-left: 3%;
-  padding-bottom: 18px;
+  position: relative;
+  left: 25px;
   color: #8d81ac;
   &::before {
     content: "<";
@@ -50,7 +51,7 @@
 
   @media screen and (max-width: $medium-screen-width) {
     justify-self: center;
-    padding-left: 0;
+    left: 0;
     padding-bottom: 43px;
     font-size: 42px;
     text-align: center;
@@ -62,53 +63,43 @@
 }
 .props {
   grid-area: props;
-  padding-top: 5px;
-  //   padding-bottom: 10px;
-  //   padding-left: 91px;
+  padding-top: 8px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 140px);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  justify-items: stretch;
 }
 .prop-card {
-  justify-self: end;
   display: grid;
   justify-content: end;
-  grid-template-columns: minmax(30%, 93px) minmax(50%, 358px);
-  padding-bottom: 33px;
-  min-height: 124px;
+  grid-template-columns: 100px 1fr;
+  grid-template-columns: 112px minmax(50%, 464px);
+  grid-auto-flow: row;
+  padding-bottom: 20px;
+  column-gap: 1.5vw;
   @media screen and (max-width: $medium-screen-width) {
-    grid-template-columns: 144px 1fr;
-    padding-bottom: 64px;
-    min-height: 130px;
+    grid-template-columns: 136px 1fr;
   }
   @media screen and (max-width: $small-screen-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 92px 1fr;
-    // justify-content: center;
-    // justify-items: center;
     text-align: center;
     padding-bottom: 0px;
     min-height: 250px;
   }
   &__icon-wrapper {
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+    justify-self: center;
+    max-width: 90px;
     @media screen and (max-width: $medium-screen-width) {
-      padding-left: 20px;
-      padding-right: 0;
-      justify-self: start;
     }
     @media screen and (max-width: $small-screen-width) {
-      padding-left: 0;
       justify-self: center;
       padding-bottom: 27px;
-      align-self: center;
     }
   }
   &__icon {
-    // float: left;
-    // justify-self: end;
-    max-width: 100%;
-    // max-width: 111px;
     max-height: 84px;
-    width: fit-content;
     object-fit: contain;
     margin: 0 auto;
     display: block;
@@ -116,10 +107,8 @@
   &__header {
     font-size: 16px;
     font-weight: 400;
-    // text-transform: capitalize;
     color: #323232;
     padding-bottom: 11px;
-    // line-height: 0.7;
     @media screen and (max-width: $medium-screen-width) {
       padding-bottom: 3px;
     }
@@ -131,21 +120,34 @@
     font-size: 14px;
     color: #848e97;
     line-height: 1.5;
-    font-family: Lato, Arial, Helvetica, sans-serif;
+    @media screen and (max-width: $small-screen-width) {
+      font-family: Lato, Arial, Helvetica, sans-serif;
+    }
   }
 }
 
 .fork-screenshot {
-  grid-area: screenshot;
-  justify-self: end;
-  width: 100%;
-  min-width: 600px;
-  height: auto;
-  position: relative;
-  right: -$wrapper-side-padding;
-  @media screen and (max-width: $medium-screen-width) {
-    width: 93%;
-    padding-top: 3.5vw;
-    min-width: auto;
+  object-fit: cover;
+  @media screen and (max-width: $small-screen-width) {
+    max-height: 381px;
+  }
+  &__wrapper {
+    grid-area: screenshot;
+    justify-self: end;
+    width: 101.5%;
+    min-width: 600px;
+    height: auto;
+    position: relative;
+    right: -$wrapper-side-padding;
+    overflow: hidden;
+    text-align: end;
+    @media screen and (max-width: $medium-screen-width) {
+      width: 93%;
+      padding-top: 3.5vw;
+      min-width: auto;
+    }
+    @media screen and (max-width: $small-screen-width) {
+      width: 100%;
+    }
   }
 }
