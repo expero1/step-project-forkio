@@ -46,12 +46,14 @@
 
 $font-size: 11px;
 $vertical-padding: 0.5em;
+$border-radius: 2px;
 .git-btn {
   text-decoration: none;
   font-size: $font-size;
   font-weight: 800;
   color: black;
   &__inner {
+    display: inline-block;
     padding-top: $vertical-padding;
     padding-bottom: $vertical-padding;
     // padding-left: 5px;
@@ -60,12 +62,12 @@ $vertical-padding: 0.5em;
     border: 1px solid rgba(132, 142, 151, 1);
     // border: 1px solid rgba(132, 142, 151, 1);
     &:first-child {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
     }
     &:last-child {
-      border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px;
+      border-bottom-right-radius: $border-radius;
+      border-top-right-radius: $border-radius;
       border-left: none;
     }
   }
@@ -80,17 +82,27 @@ $vertical-padding: 0.5em;
       rgba(244, 244, 244, 1) 0%,
       rgba(255, 255, 255, 1) 120%
     );
-    &:before {
-      position: relative;
-      top: 4px;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
   }
   &__counter {
     background-color: #fff;
     padding-left: 7px;
     padding-right: 7px;
+  }
+}
+.btn-icon {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 11px;
+  &:before {
+    // position: relative;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-43%);
+    padding-left: 10px;
+    // padding-right: 5px;
+  }
+  &::before {
   }
 }
 
