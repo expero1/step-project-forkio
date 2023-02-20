@@ -9,6 +9,7 @@ export function html() {
     .pipe(replace(/@img/g, "./"))
     .pipe(replace("../..", "./"))
     .pipe(replace("..", "./"))
+    .pipe(replace("./dist", "./"))
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
