@@ -1,6 +1,6 @@
 .what-you-get {
   /*TEMPORARY*/
-  min-height: 2000px;
+  // min-height: 2000px;
   /*TEMPORARY*/
 
   background-color: #f4f4f4;
@@ -24,12 +24,13 @@
         "props"
         "screenshot";
       grid-template-columns: 1fr;
-      grid-template-rows: auto 100fr 100fr;
+      grid-template-rows: auto 100fr 44fr;
       max-width: 768px;
       justify-items: center;
     }
     @media screen and (max-width: $small-screen-width) {
-      max-width: 320px; /* TEMPORARY */
+      // max-width: 320px;
+      /* TEMPORARY */
     }
   }
 }
