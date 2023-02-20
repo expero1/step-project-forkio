@@ -1,0 +1,9 @@
+\#source/
+.gitignore
+.vscode/
+TODO.md
+node_modules/
+package-lock.json
+toDO.txt
+dist
+/index.html
