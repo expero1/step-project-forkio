@@ -13,7 +13,7 @@ export const appPath = {
     fonts: `${srcDir}/fonts/**/*.*`,
   },
   build: {
-    html: `${rootDir}`,
+    html: `${buildDir}`,
     css: `${buildDir}/css`,
     js: `${buildDir}/js`,
     img: `${buildDir}/img`,
@@ -27,7 +27,7 @@ export const appPath = {
     fonts: `${srcDir}/fonts`,
   },
   clean: {
-    html: `${rootDir}/*.html`,
+    html: `${buildDir}/*.html`,
     css: `${buildDir}/css/*.css`,
     js: `${buildDir}/js/*.js`,
     img: `${buildDir}/img/*/`,
