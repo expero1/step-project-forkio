@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"),url(../fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
