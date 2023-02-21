@@ -33,4 +33,3 @@ jobs:
         REPO: git@github.com:owner/repo.git
         BRANCH: gh-pages
         FOLDER: build
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}       
