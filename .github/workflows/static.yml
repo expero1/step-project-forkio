@@ -16,16 +16,7 @@ jobs:
     - run: npm ci
     - run: npm run build
 
-    - name: Init new repo in dist folder and commit generated files
-      run: |
-        cd dist
-        git config --global --add safe.directory /github/workspace/dist
-        git init
-        git add -A
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        git commit -m 'deploy'
+    
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
