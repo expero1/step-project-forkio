@@ -1,0 +1,61 @@
+.rev-editor {
+  text-align: center;
+  // min-height: 200vw;
+  /*TEMPORARY*/
+}
+.rev-editor__header {
+  font-size: 54px;
+  text-transform: uppercase;
+  color: #635c73;
+  padding-bottom: 27px;
+  margin: 0 auto;
+}
+
+.rev-editor__content {
+  max-width: 861px;
+  margin: 0 auto;
+  font-size: 21px;
+  color: #323232;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  line-height: 1.52;
+  padding-bottom: 23px;
+}
+
+.git-block {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: $medium-screen-width) {
+  .rev-editor__header {
+    padding-bottom: 14px;
+    font-size: 42px;
+    line-height: 1.1;
+  }
+  .rev-editor__content {
+    padding-bottom: 39px;
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: $small-screen-width) {
+  .rev-editor__header {
+    font-size: 26px;
+    max-width: 345px;
+    padding-bottom: 22px;
+  }
+  .rev-editor__content {
+    font-size: 14px;
+    max-width: 314px;
+    padding-bottom: 33px;
+    line-height: 1.37;
+  }
+  .git-block {
+    flex-wrap: wrap;
+    row-gap: 22px;
+    max-width: 320px;
+  }
+}
