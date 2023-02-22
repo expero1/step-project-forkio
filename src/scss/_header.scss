@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: url(../img/img_1.png) center center no-repeat;
+    background: url(../img/img_1.png) center no-repeat;
     background-size: cover;
     height: 800px;
     &_figure {
@@ -83,6 +83,9 @@
             }
         }
     }
+    @media (max-width: $small-screen-width) {
+        height: 718px;
+    }
 }
 
 .navbar {
@@ -139,20 +142,24 @@
     &_menu {
         display: flex;
         gap: 38px;
+        padding-left: 40px;
         &_list {
             list-style: none;
             display: flex;
             width: 517px;
             align-items: center;
             margin: 0;
+            padding: 0;
             white-space: nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
             @include font('Montserrat', normal, 700, 16px, 15px);
             @media (max-width: $medium-screen-width) {
                 position: absolute;
                 top: 83px;
-                left: calc(50% - 275px);
+                gap: 10%;
+                left: calc(50% - 225px);
                 line-height: 18px;
+                max-width: 300px;
             }
             @media (max-width: $small-screen-width) {
                 display: none;
@@ -173,15 +180,15 @@
             transition: 1s;
             @media (max-width: $medium-screen-width) {
                 position: absolute;
-                right: 20px;
+                right: 15px;
                 top: 24px;
                 line-height: 16px;
             }
             @media (max-width: $small-screen-width) {
                 position: absolute;
                 top: 34px;
-                width: 145px;
-                left: calc(50% - 70px);
+                width: 119px;
+                left: calc(50% - 55px);
                 line-height: 18px;
             }
             &:hover {
@@ -202,11 +209,12 @@
                 color: $color-white;
                 height: 23px;
                 width: 23px;
+                right: 20px;
+                top: 45px;
                 position: absolute;
-                right: 25px;
                 border: none;
                 padding: 0;
-                @include font('Lato', normal, 900, 20px, 5px);
+                @include font('Lato', normal, 900, 20px, 10px);
                 text-align: end;
             }
         }
@@ -233,7 +241,6 @@
         flex-direction: column;
         padding: 0;
         width: 293px;
-        height: 379px;
         background-color: #333333;
         top: 103px;
         left: calc(50% - 147px);
@@ -244,7 +251,7 @@
         width: 292px;
         display: block;
         color: #fff;
-        padding: 17px 0;
+        padding: 18px 0;
         border-bottom: #3b3b3b 3px solid;
         }
     .navbar_menu_link {
