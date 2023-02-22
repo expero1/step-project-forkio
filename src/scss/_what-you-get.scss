@@ -9,22 +9,31 @@
   }
   &__wrapper {
     display: grid;
-    grid-template-areas:
-      "props header"
+    // grid-template-areas:
+    //   "props header"
+    //   "props screenshot"
+    //   "props screenshot"
+    //   "props screenshot";
+    // grid-template-columns: 1.1fr 1.1fr;
+    // grid-template-rows: 1fr 7.5fr;
+    grid:
+      "props header" 1fr
       "props screenshot"
       "props screenshot"
-      "props screenshot";
-    grid-template-columns: 1.1fr 1.1fr;
-    grid-template-rows: 1fr 7.5fr;
+      "props screenshot" 7.5fr/1.1fr 1.1fr;
     column-gap: 0vw;
     padding-top: 71px;
     @media screen and (max-width: $medium-screen-width) {
-      grid-template-areas:
-        "header"
-        "props"
-        "screenshot";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 100fr 44fr;
+      // grid-template-areas:
+      //   "header"
+      //   "props"
+      //   "screenshot";
+      // grid-template-columns: 1fr;
+      // grid-template-rows: auto 100fr 100fr;
+      grid:
+        "header" auto
+        "props" 100fr
+        "screenshot" auto/1fr;
       max-width: 768px;
       justify-items: center;
     }
@@ -66,9 +75,10 @@
   grid-area: props;
   padding-top: 8px;
   display: grid;
-  grid-template-rows: repeat(auto-fill, 140px);
-  grid-template-rows: auto;
-  grid-auto-flow: row;
+  // grid-template-rows: repeat(auto-fill, 140px);
+  // grid-template-rows: auto;
+  // grid-auto-flow: row;
+  grid: auto-flow auto;
   justify-items: stretch;
   @media screen and (max-width: $medium-screen-width) {
     padding-top: 0;

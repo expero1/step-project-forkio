@@ -1,13 +1,16 @@
+$price-card-max-width: 257px;
+$price-card-highlight-max-width: 299px;
+
 .price-card {
   &__wrapper {
     width: 25%;
     display: flex;
     justify-content: center;
     min-width: 200px;
-    max-width: 257px;
+    max-width: $price-card-max-width;
     &--highlight {
       width: 29%;
-      max-width: 299px;
+      max-width: $price-card-highlight-max-width;
     }
   }
   width: 100%;
@@ -18,7 +21,7 @@
   background-color: rgba(255, 255, 255, 0.11);
   &--highlight {
     width: 100%;
-    max-width: 299px;
+    max-width: $price-card-highlight-max-width;
     background-color: rgba(70, 48, 72, 0.84);
     padding-bottom: 48px;
   }
@@ -98,10 +101,10 @@
     &__wrapper {
       min-width: 40%;
     }
-    max-width: 257px;
+    max-width: $price-card-max-width;
     min-width: 210px;
     &--highlight {
-      max-width: 299px;
+      max-width: $price-card-highlight-max-width;
       min-width: 220px;
     }
   }
