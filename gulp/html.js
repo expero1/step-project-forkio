@@ -10,6 +10,7 @@ export function html() {
     .pipe(replace("../..", "./"))
     .pipe(replace("..", "./"))
     .pipe(replace("./dist", "./"))
+    .pipe(replace("/dist", "."))
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
