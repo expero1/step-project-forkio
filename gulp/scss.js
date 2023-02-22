@@ -23,22 +23,21 @@ export function scss() {
       .pipe(replace(/@img/g, "../img"))
       .pipe(
         purgecss({
-          content: [`${path.build.html}/*.html}`],
+          content: [`${path.build.html}/*.html`],
           safelist: [/active$/],
         })
       )
       // .pipe(cleancss())
-      .pipe(
-        cleancss({
-          level: { 1: { specialComments: 0 } },
-        })
-      )
       .pipe(gcmq())
       .pipe(
         autoprefixer({
           overrideBrowserslist: ["last 4 versions"],
           grid: true,
-        })
+        }).pipe(
+          cleancss({
+            level: { 1: { specialComments: 0 } },
+          })
+        )
       )
       .pipe(dest(`${path.build.css}`))
       .pipe(browserSync.stream())
