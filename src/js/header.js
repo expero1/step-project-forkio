@@ -1,29 +1,28 @@
 'use strict';
 
 const burger = document.getElementById('burger');
-const navbar = document.querySelector('.navbar_menu_list');
+const navbar = document.querySelector('.navbar__menu__list');
+const toggle = document.querySelectorAll('.navbar__button__burger-toggle');
+
+function showMenu() {
+    toggle.forEach(elem => {
+        if(elem.style.opacity === '1') {
+            elem.style.opacity = '0';
+            navbar.classList.remove('active');
+        } else {
+            elem.style.opacity = '1';
+            navbar.classList.add('active');
+        }
+    })
+}
 
 window.addEventListener("click", (e) => {
     let trg = e.target;
     if (burger.contains(trg)) {
         showMenu();
-    } else {
-    if (!navbar.contains(trg) && navbar.classList.contains('active')) {
-        burger.innerHTML = '<span>&#x2013;<br>&#x2014;<br>&#x2014;</span>';
+    } else if (!navbar.contains(trg)) {
         navbar.classList.remove('active');
-        navbar.classList.add('inactive');
+        toggle[1].style.opacity = '0';
+        toggle[0].style.opacity = '1';
     }
-    }
-});
-
-function showMenu() {
-    if(burger.innerHTML === '<span style="font-size: 60px;">&times;</span>' || burger.innerHTML === '<span style="font-size: 60px;">×</span>') {
-        burger.innerHTML = '<span>&#x2013;<br>&#x2014;<br>&#x2014;</span>';
-        navbar.classList.remove('active');
-        navbar.classList.add('inactive');
-    } else {
-        burger.innerHTML = '<span style="font-size: 60px;">&times;</span>';
-        navbar.classList.remove('inactive');
-        navbar.classList.add('active');
-    }
-}
+})

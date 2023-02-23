@@ -1,16 +1,17 @@
 <navbar class="navbar">
-        <div class="navbar_logo">
-            <div class="navbar_logo_svg"></div>           
-            <span class="navbar_logo_span">Forkio</span>
-        </div>
-        <div class="navbar_menu">
-            <ul class="navbar_menu_list">
-                <li class="navbar_menu_li"><a class="navbar_menu_link" href="#">Overview</a></li>
-                <li class="navbar_menu_li"><a class="navbar_menu_link" href="#about">About Fork</a></li>
-                <li class="navbar_menu_li"><a class="navbar_menu_link" href="#options">Buying Options</a></li>
-                <li class="navbar_menu_li"><a class="navbar_menu_link" href="#support">Support</a></li>
+            <a href="#" class="navbar__logo">
+                <div class="navbar__logo__svg"></div>           
+                <span class="navbar__logo__title">Forkio</span>
+            </a>
+            <ul class="navbar__menu__list">
+                <li class="navbar__menu__elem"><a class="navbar__menu__link" href="#">Overview</a></li>
+                <li class="navbar__menu__elem"><a class="navbar__menu__link" href="#about">About Fork</a></li>
+                <li class="navbar__menu__elem"><a class="navbar__menu__link" href="#options">Buying Options</a></li>
+                <li class="navbar__menu__elem"><a class="navbar__menu__link" href="#support">Support</a></li>
             </ul>
-            <button class="navbar_menu_button action-button ">Buy Now</button>
-        </div>
-        <button id="burger" class="navbar_button_burger"><span>&#x2013;<br>&#x2014;<br>&#x2014;</span></button>
+            <button class="navbar__menu__button action-button">Buy Now</button>
+        <button id="burger" class="navbar__button__burger">
+            <span class="navbar__button__burger-toggle" style="opacity: 1">&#x2013; &#x2014; &#x2014;</span>
+            <span class="navbar__button__burger-toggle" style="opacity: 0">&times;</span>
+        </button>
 </navbar>
