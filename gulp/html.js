@@ -6,9 +6,11 @@ export function html() {
   return src(`${path.src.html}/*.html`)
     .pipe(showAlertMessage("HTML"))
     .pipe(include())
-    .pipe(replace(/@img/g, "./dist"))
-    .pipe(replace("../..", "./dist"))
-    .pipe(replace("..", "./dist"))
+    .pipe(replace(/@img/g, "./"))
+    .pipe(replace("../..", "./"))
+    .pipe(replace("..", "./"))
+    .pipe(replace("./dist", "./"))
+    .pipe(replace("/dist", "."))
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
