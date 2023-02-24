@@ -1,9 +1,12 @@
 @import "vars";
+@import "mixins";
 @import "_temporary-vars"; // remove in prodaction
 @import "fonts";
 @import "normalize";
 @import "normalize-local";
 @import "common";
+@import "git-btn";
+@import "revolutionary-editor";
 @import "price";
 @import "header";
 @import "navbar";

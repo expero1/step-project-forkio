@@ -1,22 +1,18 @@
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  min-width: $wrapper-min-width;
 }
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
+
 .wrapper {
   max-width: $wrapper-max-width;
-  min-width: $wrapper-min-width;
+  // min-width: $wrapper-min-width;
   margin: 0 auto;
   padding: 0 $wrapper-side-padding;
   @media screen and (max-width: $medium-screen-width) {
-    max-width: $medium-screen-width;
+    // max-width: $medium-screen-width;
   }
   @media screen and (max-width: $small-screen-width) {
-    max-width: $small-screen-width;
+    // max-width: $small-screen-width;
   }
 }
 .section-header {
