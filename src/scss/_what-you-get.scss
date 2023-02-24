@@ -19,9 +19,11 @@
         "screenshot" auto/1fr;
       max-width: 768px;
       justify-items: center;
+      padding-bottom: 0;
     }
     @media screen and (max-width: $small-screen-width) {
       //max-width: 320px; /* TEMPORARY */
+      padding-bottom: 3px;
     }
   }
 }

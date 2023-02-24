@@ -10,7 +10,7 @@
   min-height: 144px;
   @media screen and (max-width: $medium-screen-width) {
     grid-template-columns: 131px 1fr;
-    min-height: auto;
+    min-height: 140px;
     padding-top: 10px;
   }
   @media screen and (max-width: $small-screen-width) {
