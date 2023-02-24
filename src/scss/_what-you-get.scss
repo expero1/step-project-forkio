@@ -1,0 +1,113 @@
+.what-you-get {
+  /*TEMPORARY*/
+  min-height: 2000px;
+  /*TEMPORARY*/
+
+  background-color: #f4f4f4;
+  @media screen and (max-width: $medium-screen-width) {
+    background-color: #fff;
+  }
+  &__wrapper {
+    display: grid;
+    // grid-template-areas:
+    //   "props header"
+    //   "props screenshot"
+    //   "props screenshot"
+    //   "props screenshot";
+    // grid-template-columns: 1.1fr 1.1fr;
+    // grid-template-rows: 1fr 7.5fr;
+    grid:
+      "props header" 1fr
+      "props screenshot"
+      "props screenshot"
+      "props screenshot" 7.5fr/1.1fr 1.1fr;
+    column-gap: 0vw;
+    padding-top: 71px;
+    @media screen and (max-width: $medium-screen-width) {
+      // grid-template-areas:
+      //   "header"
+      //   "props"
+      //   "screenshot";
+      // grid-template-columns: 1fr;
+      // grid-template-rows: auto 100fr 100fr;
+      grid:
+        "header" auto
+        "props" 100fr
+        "screenshot" auto/1fr;
+      max-width: 768px;
+      justify-items: center;
+    }
+    @media screen and (max-width: $small-screen-width) {
+      max-width: 320px; /* TEMPORARY */
+    }
+  }
+}
+.what-you-get__header {
+  grid-area: header;
+  justify-self: start;
+  text-transform: initial;
+  text-align: start;
+  line-height: 1.2;
+  position: relative;
+  left: 25px;
+  color: #8d81ac;
+  &::before {
+    content: "<";
+  }
+  &::after {
+    content: ">";
+  }
+
+  @media screen and (max-width: $medium-screen-width) {
+    justify-self: center;
+    left: 0;
+    padding-bottom: 35px;
+    font-size: 42px;
+    text-align: center;
+  }
+  @media screen and (max-width: $small-screen-width) {
+    font-size: 32px;
+    padding-bottom: 27px;
+  }
+}
+.props {
+  grid-area: props;
+  padding-top: 8px;
+  display: grid;
+  // grid-template-rows: repeat(auto-fill, 140px);
+  // grid-template-rows: auto;
+  // grid-auto-flow: row;
+  grid: auto-flow auto;
+  justify-items: stretch;
+  @media screen and (max-width: $medium-screen-width) {
+    padding-top: 0;
+  }
+}
+@import "what-you-get-prop-card";
+
+.fork-screenshot {
+  object-fit: cover;
+  @media screen and (max-width: $small-screen-width) {
+    max-height: 381px;
+  }
+  &__wrapper {
+    grid-area: screenshot;
+    justify-self: end;
+    width: 101.5%;
+    min-width: 600px;
+    height: auto;
+    position: relative;
+    right: -$wrapper-side-padding;
+    overflow: hidden;
+    text-align: end;
+    @media screen and (max-width: $medium-screen-width) {
+      width: 93%;
+      padding-top: 37px;
+      min-width: auto;
+    }
+    @media screen and (max-width: $small-screen-width) {
+      width: 100%;
+      padding-top: 24px;
+    }
+  }
+}
