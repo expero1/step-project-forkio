@@ -1,0 +1,97 @@
+
+.testimonials {
+    max-width: 100%;
+    padding: 0 $wrapper-side-padding;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/testmonials-bg_1.png') center/cover no-repeat;
+    height: 100%;
+    &__title {
+        margin-top: 108px;
+        color: $color-white;
+        @include font('Montserrat', normal, 700, 48px, 50px);
+        text-align: center;
+        @media (max-width: $medium-screen-width) {
+            @include font('Montserrat', normal, 700, 42px, 44px);
+            margin-top: 85px;
+        }
+        @media (max-width: $small-screen-width) {
+            @include font('Montserrat', normal, 700, 36px, 48px);
+            margin-top: 47px;
+        }
+    }
+    &__main {
+        &__list {
+            margin: 70px 18px 120px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 120px;
+            justify-content: space-around;
+            @media (max-width: $medium-screen-width) {
+                margin: 80px 0 80px;
+                row-gap: 70px;
+                column-gap: 90px;
+            }
+            @media (max-width: $small-screen-width) {
+                row-gap: 80px;
+                margin: 45px 16px 100px;
+            }
+        }
+        &__link {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            list-style: none;
+            color: $color-white;
+            gap: 20px;
+            @include font('Lato', italic, 700, 16px, 24px);
+            @media (max-width: $medium-screen-width) {
+                width: 40%;
+            }
+            @media (max-width: $small-screen-width) {
+                width: 100%;
+            }
+            &-description {
+                height: 55px;
+                max-width: 325px;
+                @media (max-width: $small-screen-width) {
+                    max-width: 290px;
+                    @include font('Lato', italic, 700, 16px, 24px);
+                }
+            }
+        }
+    }
+    &__description {
+        max-width: 890px;
+        margin: auto;
+        color: #A291A5;
+        @include font('Lato', normal, 400, 14px, 21px);
+        text-align: center;
+        @media (max-width: $medium-screen-width) {
+            width: 90%;
+        }
+        @media (max-width: $small-screen-width) {
+            width: 80%;
+        }
+        &::after {
+            content: " ";
+            display: block;
+            position: relative;
+            max-width: 780px;
+            height: 10px;
+            border-bottom: #645766 2px solid;
+            margin: auto;
+            @media (max-width: $medium-screen-width) {
+                max-width: 555px;
+            }
+            @media (max-width: $small-screen-width) {
+                height: 25px;
+            }
+        }
+    }
+}
