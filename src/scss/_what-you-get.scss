@@ -1,21 +1,10 @@
 .what-you-get {
-  /*TEMPORARY*/
-  min-height: 2000px;
-  /*TEMPORARY*/
-
   background-color: #f4f4f4;
   @media screen and (max-width: $medium-screen-width) {
     background-color: #fff;
   }
   &__wrapper {
     display: grid;
-    // grid-template-areas:
-    //   "props header"
-    //   "props screenshot"
-    //   "props screenshot"
-    //   "props screenshot";
-    // grid-template-columns: 1.1fr 1.1fr;
-    // grid-template-rows: 1fr 7.5fr;
     grid:
       "props header" 1fr
       "props screenshot"
@@ -24,12 +13,6 @@
     column-gap: 0vw;
     padding-top: 71px;
     @media screen and (max-width: $medium-screen-width) {
-      // grid-template-areas:
-      //   "header"
-      //   "props"
-      //   "screenshot";
-      // grid-template-columns: 1fr;
-      // grid-template-rows: auto 100fr 100fr;
       grid:
         "header" auto
         "props" 100fr
@@ -38,7 +21,7 @@
       justify-items: center;
     }
     @media screen and (max-width: $small-screen-width) {
-      max-width: 320px; /* TEMPORARY */
+      //max-width: 320px; /* TEMPORARY */
     }
   }
 }
@@ -74,9 +57,6 @@
   grid-area: props;
   padding-top: 8px;
   display: grid;
-  // grid-template-rows: repeat(auto-fill, 140px);
-  // grid-template-rows: auto;
-  // grid-auto-flow: row;
   grid: auto-flow auto;
   justify-items: stretch;
   @media screen and (max-width: $medium-screen-width) {
