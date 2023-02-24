@@ -1,0 +1,17 @@
+$medium-screen-width: 992px;
+$small-screen-width: 480px;
+$wrapper-max-width: 1200px;
+$wrapper-min-width: 320px;
+$wrapper-side-padding: 10px;
+$color-white: #FFF;
+$color-black: #000;
+$color-purple: #8D81AC;
+$color-grey: #848E97;
+
+@mixin font($family: ('Montserrat', sans-serif), $style, $weight, $size, $height) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}

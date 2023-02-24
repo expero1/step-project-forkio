@@ -1,0 +1,28 @@
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+.wrapper {
+  max-width: $wrapper-max-width;
+  margin: 0 auto;
+  padding: 0 $wrapper-side-padding;
+}
+.section-header {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+.action-button {
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $color-purple;
+}

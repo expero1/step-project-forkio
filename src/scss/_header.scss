@@ -1,0 +1,107 @@
+.header {
+    margin: 0 auto;
+    padding: 0 $wrapper-side-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../img/img_1.png) center/cover no-repeat;
+    height: 800px;
+    &__figure {
+        position: relative;
+        top: 183px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 19px;
+        margin: 0;
+        padding: 0;
+        @media (max-width: $medium-screen-width) {
+            top: 180px;
+        }
+        @media (max-width: $small-screen-width) {
+            text-align: center;
+            top: 150px;
+        }
+        &__title {
+            color: $color-white;
+            @include font(('Montserrat', sans-serif), normal, 700, 82px, 82px);
+            @media (max-width: $medium-screen-width) {
+                @include font(('Montserrat', sans-serif), normal, 700, 72px, 72px);
+            }
+            @media (max-width: $small-screen-width) {
+                @include font(('Montserrat', sans-serif), normal, 700, 48px, 48px);
+            }
+        }
+        &__main {
+            color: $color-purple;
+            @include font(('Lato', sans-serif), normal, 400, 30px, 30px);
+            text-align: center;
+            @media (max-width: $medium-screen-width) {
+                @include font(('Lato', sans-serif), normal, 400, 24px, 24px);
+                margin: 0 20px;
+            }
+            @media (max-width: $small-screen-width) {
+                @include font(('Lato', sans-serif), normal, 400, 18px, 24px);
+            }
+        }
+        &__paragraph {
+            color: $color-grey;
+            @include font(('Montserrat', sans-serif), normal, 400, 16px, 16px);
+            @media (max-width: $medium-screen-width) {
+                @include font(('Lato', sans-serif), normal, 400, 14px, 14px);
+            }
+        }
+    }
+    &__wrapper {
+        &-button {
+            position: relative;
+            bottom: -80px;
+        }
+    }
+    &__button {
+        @include font(('Montserrat', sans-serif), normal, 700, 21px, 22px);
+        width: 390px;
+        height: 62px;
+        @media (max-width: $medium-screen-width) {
+            line-height: 22px;
+        }
+        @media (max-width: $small-screen-width) {
+            @include font(('Montserrat', sans-serif), normal, 700, 18px, 20px);
+            width: 290px;
+            height: 45px
+        }
+        &__description {
+            text-align: center;
+            color: $color-grey;
+            @include font(('Montserrat', sans-serif), normal, 400, 14px, 15px);
+                margin: 19px;
+            @media (max-width: $medium-screen-width) {
+                line-height: 16px;
+            }
+            @media (max-width: $small-screen-width) {
+                @include font(('Montserrat', sans-serif), normal, 400, 14px, 14px);
+            }
+        }
+    }
+    @media (max-width: $small-screen-width) {
+        height: 715px;
+    }
+}
+
+.button__hover {
+    text-align: center;
+    border-radius: 40px;
+    padding: 0;
+    border: 0;
+    transition: 1s;
+    &:hover {
+        color: $color-purple;
+        background-color: $color-white;
+        border: 2px solid $color-purple;
+    }
+}
+
+button {
+    cursor: pointer;
+}

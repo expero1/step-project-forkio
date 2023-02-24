@@ -1,10 +1,12 @@
 {
   "name": "step-project-forkio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Step Project 2 by Olena Hodyna and Eugene Emets, DAN IT FE 14 Online Advanced HTML/CSS Course",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -12,6 +14,7 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://gitlab.com/expero1/step-project-forkio/issues"
   },
@@ -28,10 +31,13 @@
     "gulp-imagemin": "^8.0.0",
     "gulp-js-minify": "^0.0.3",
     "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-purgecss": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.58.0"
   }
