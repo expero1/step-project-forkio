@@ -2,6 +2,14 @@
   text-align: center;
   padding-top: 130px;
   padding-bottom: 70px;
+  @media screen and (max-width: $medium-screen-width) {
+    padding-top: 154px;
+    padding-bottom: 67px;
+  }
+  @media screen and (max-width: $small-screen-width) {
+    padding-top: 125px;
+    padding-bottom: 31px;
+  }
 }
 .rev-editor__header {
   font-size: 54px;
