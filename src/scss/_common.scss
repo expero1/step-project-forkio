@@ -33,6 +33,19 @@ p {
   border-radius: 40px;
   font-size: 16px;
   font-weight: 700;
+<<<<<<< HEAD
   color: $color-white;
   background-color: $color-purple;
+=======
+  color: #fff;
+  background-color: #8d81ac;
+  text-decoration: none;
+}
+.divider {
+  display: block;
+  height: 5px;
+  width: 60px;
+  background-color: #8d81ac;
+  margin: 0 auto;
+>>>>>>> 3a71a2b97c28e07c815d04294e87fd30b157e00f
 }
