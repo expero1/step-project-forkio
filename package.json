@@ -12,13 +12,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/expero1/step-project-forkio.git"
   },
-  "author": "",
-  "license": "ISC",
   "type": "module",
-  "bugs": {
-    "url": "https://gitlab.com/expero1/step-project-forkio/issues"
-  },
-  "homepage": "https://gitlab.com/expero1/step-project-forkio#readme",
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "del": "^7.0.0",
