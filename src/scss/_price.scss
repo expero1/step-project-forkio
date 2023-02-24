@@ -1,9 +1,9 @@
 .price {
   color: #fff;
-  background: grey url("../img/price/price-section-background.jpg") center/
+  background: #4b3b4e url("../img/price/price-section-background.jpg") center/
     cover no-repeat;
   @media screen and (max-width: $small-screen-width) {
-    background-image: url("../img/price/price-section-background-small-screen.png");
+    background-image: none;
   }
   min-height: 200vh; /* TEMPORARY */
 }
