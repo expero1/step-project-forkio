@@ -4,8 +4,15 @@
   padding-bottom: 24px;
   background: #4b3b4e url("../img/price/price-section-background.jpg") center/
     cover no-repeat;
+
+  @media screen and (max-width: $medium-screen-width) {
+    padding-top: 88px;
+    padding-bottom: 44px;
+  }
   @media screen and (max-width: $small-screen-width) {
     background-image: none;
+    padding-top: 7px;
+    padding-bottom: 0px;
   }
 }
 .price-cards {
