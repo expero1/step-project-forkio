@@ -1,0 +1,38 @@
+.price {
+  color: #fff;
+  background: #4b3b4e url("../img/price/price-section-background.jpg") center/
+    cover no-repeat;
+  @media screen and (max-width: $small-screen-width) {
+    background-image: none;
+  }
+}
+.price-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding-top: 61px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: $medium-screen-width) {
+  .price-cards {
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 30px;
+    padding-top: 38px;
+  }
+}
+@media screen and (max-width: $small-screen-width) {
+  .price__header {
+    font-size: 28px;
+    line-height: 1.5;
+    max-width: 357px;
+    margin: 0 auto;
+  }
+  .price-cards {
+    row-gap: 18px;
+    padding-top: 25px;
+  }
+}
